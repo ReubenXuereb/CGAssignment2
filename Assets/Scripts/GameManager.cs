@@ -143,6 +143,24 @@ public class GameManager : MonoBehaviour
         GameObject.Find("P2Score").GetComponent<Text>().text = "P2: " + score;
     }
 
+    public void roundText(int round)
+    {
+        GameObject.Find("CurrentRoundText").GetComponent<Text>().text = "Round: " + round;
+    }
+
+    public void winnerText(string winner)
+    {
+        if (SceneManager.GetActiveScene().name == "Game Over")
+        {
+            GameObject.Find("WinnerText").GetComponent<Text>().text = "Winner is: " + winner;
+        }
+    }
+
+    public void BackButton()
+    {
+        SceneManager.LoadScene("Welcome");
+    }
+
     public void PlayAgain()
     {
         Destroy(GameObject.Find("FirebaseConfig"));

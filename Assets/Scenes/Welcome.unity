@@ -1037,6 +1037,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joinRoomCode: {fileID: 112475024}
+  player1:
+    playerName: 
+    rps: 
+    uniqueID: 
+    score: 0
+  player2:
+    playerName: 
+    rps: 
+    uniqueID: 
+    score: 0
+  currentRound: 1
+  doneOnce: 0
 --- !u!4 &601391520
 Transform:
   m_ObjectHideFlags: 0
@@ -1443,8 +1455,16 @@ MonoBehaviour:
   - {fileID: 6249076526049288800, guid: ae6e94517ae634248990f547328cc44a, type: 3}
   - {fileID: 5747455036315569879, guid: ae6e94517ae634248990f547328cc44a, type: 3}
   - {fileID: -4662085276207082885, guid: ae6e94517ae634248990f547328cc44a, type: 3}
+  rockButton: {fileID: 0}
+  paperButton: {fileID: 0}
+  scissorsButton: {fileID: 0}
   spriteRefP1: {fileID: 0}
   spriteRefP2: {fileID: 0}
+  p1Choice: 
+  p2Choice: 
+  switchButtonsOnOff: 0
+  playerWinner: 0
+  rounds: 5
 --- !u!4 &1449264337
 Transform:
   m_ObjectHideFlags: 0

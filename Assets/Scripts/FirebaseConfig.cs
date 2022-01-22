@@ -89,7 +89,6 @@ public class FirebaseConfig : MonoBehaviour
         player2joined = false;
         myDB = FirebaseDatabase.DefaultInstance.RootReference;
         DontDestroyOnLoad(this.gameObject);
-        
     }
 
     public void createGame() 
@@ -212,7 +211,20 @@ public class FirebaseConfig : MonoBehaviour
         myDB.Child("Rooms").Child(roomKey).Child("currentRound").ValueChanged += handleRounds;
         myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player1").Child("score").ValueChanged += handleP1Score;
         myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player2").Child("score").ValueChanged += handleP2Score;
+        myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player2").Child("score").ValueChanged += handleP2Score;
+        myDB.Child("Rooms").Child(roomKey).Child("currentRound").ValueChanged += handleRoundText;
+
     }
+
+    //void handleWinnerText(object sender, ValueChangedEventArgs args)
+    //{
+    //    if (args.DatabaseError != null)
+    //    {
+    //        Debug.LogError(args.DatabaseError.Message);
+    //        return;
+    //    }
+
+    //}
 
     void handleP1Score(object sender, ValueChangedEventArgs args)
     {
@@ -234,6 +246,18 @@ public class FirebaseConfig : MonoBehaviour
         GameObject.Find("GameManager").GetComponent<GameManager>().p2ScoreText(int.Parse(args.Snapshot.Value.ToString()));
     }
 
+    void handleRoundText(object sender, ValueChangedEventArgs args)
+    {
+
+        if (args.DatabaseError != null)
+        {
+            Debug.LogError(args.DatabaseError.Message);
+            return;
+        }
+        GameObject.Find("GameManager").GetComponent<GameManager>().roundText(int.Parse(args.Snapshot.Value.ToString()));
+
+    }
+
     void handleRounds(object sender, ValueChangedEventArgs args)
     {
 
@@ -242,20 +266,29 @@ public class FirebaseConfig : MonoBehaviour
             Debug.LogError(args.DatabaseError.Message);
             return;
         }
-        if(int.Parse(args.Snapshot.Value.ToString()) > GameObject.Find("GameManager").GetComponent<GameManager>().rounds)
+        
+        if (int.Parse(args.Snapshot.Value.ToString()) > GameObject.Find("GameManager").GetComponent<GameManager>().rounds)
         {
+            print("X jahbat" + int.Parse(args.Snapshot.Value.ToString()));
+            print(player1.score);
+            print(player2.score);
             if(player1.score > player2.score)
             {
                 winner = player1.playerName;
+                print(player1.playerName);
+                myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync(winner);
             }
             if (player2.score > player1.score)
             {
                 winner = player2.playerName;
+                print(player2.playerName);
+                myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync(winner);
             }
-            if (player2.score == player1.score)
-            {
-                winner = "Draw";
-            }
+            //else if (player1.score == player2.score)
+            //{
+            //    winner = "Draw";
+            //    myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync("Draw");
+            //}
             SceneManager.LoadScene("GameOver");
         }
     }
@@ -284,8 +317,8 @@ public class FirebaseConfig : MonoBehaviour
         }
         string p1Choice = args.Snapshot.Child("_player1").Child("rps").Value.ToString();
         string p2Choice = args.Snapshot.Child("_player2").Child("rps").Value.ToString();
-        //GameObject whoWonText = GameObject.Find("WhoWonRoundText");
-       // whoWonText.SetActive(false);
+        GameObject whoWonText = GameObject.Find("WhoWonRoundText");
+        //whoWonText.SetActive(false);
 
         if (p1Choice != "" && p2Choice != "" && mainPlayer && !doneOnce)
         {
@@ -297,22 +330,23 @@ public class FirebaseConfig : MonoBehaviour
             {
                 player1.score++;
                 myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player1").Child("score").SetValueAsync(player1.score);
-               //whoWonText.SetActive(true);
-                //GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Player 1 won this round";
+                whoWonText.SetActive(true);
+                GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Player 1 won this round";
+                
             }
             if (winner == 2)
             {
                 player2.score++;
                 myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player2").Child("score").SetValueAsync(player2.score);
-                print("thalkt go p2");
-                //whoWonText.SetActive(true);
-               //GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Player 1 won this round";
+                print("thalt go p2");
+                whoWonText.SetActive(true);
+                GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Player 2 won this round";
             }
             if (winner == 0)
             {
                 print("Draw");
-                //whoWonText.SetActive(true);
-               // GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Draw";
+                whoWonText.SetActive(true);
+                GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Draw";
             }
             currentRound++;
             //whoWonText.SetActive(false);
