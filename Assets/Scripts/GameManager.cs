@@ -40,7 +40,11 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "RoomLobby")
         {
             roomeCodeText.text = FirebaseConfig.roomKey;
-            FirebaseConfig.player2JoinedListener();
+            GameObject.Find("FirebaseConfig").GetComponent<FirebaseConfig>().player2JoinedListener();
+        }
+        if(SceneManager.GetActiveScene().name == "Game")
+        {
+            GameObject.Find("FirebaseConfig").GetComponent<FirebaseConfig>().updatePlayerListener();
         }
     }
 
@@ -79,7 +83,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame() 
     {
-        StartCoroutine(FirebaseConfig.StartGame());
+        StartCoroutine(GameObject.Find("FirebaseConfig").GetComponent<FirebaseConfig>().StartGame());
     }
 
    
@@ -130,7 +134,14 @@ public class GameManager : MonoBehaviour
         return playerWinner;
     }
 
-    
+    public void p1ScoreText(int score)
+    {
+        GameObject.Find("P1Score").GetComponent<Text>().text = "P1: " + score;
+    } 
+    public void p2ScoreText(int score)
+    {
+        GameObject.Find("P2Score").GetComponent<Text>().text = "P2: " + score;
+    }
 
     public void PlayAgain()
     {

@@ -611,6 +611,18 @@ MonoBehaviour:
   scoreP1: {fileID: 0}
   scoreP2: {fileID: 0}
   winner: {fileID: 0}
+  showSpriteP1: []
+  showSpriteP2: []
+  rockButton: {fileID: 0}
+  paperButton: {fileID: 0}
+  scissorsButton: {fileID: 0}
+  spriteRefP1: {fileID: 0}
+  spriteRefP2: {fileID: 0}
+  p1Choice: 
+  p2Choice: 
+  switchButtonsOnOff: 0
+  playerWinner: 0
+  rounds: 5
 --- !u!4 &1346453506
 Transform:
   m_ObjectHideFlags: 0
@@ -1086,7 +1098,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.014954, y: -204}
+  m_AnchoredPosition: {x: -0.014954, y: -60}
   m_SizeDelta: {x: 1308.4, y: 105.57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1802141141
