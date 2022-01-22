@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "34294707109",
+    "firebase_url": "https://connected-gaming-hassign1-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "connected-gaming-hassign1",
+    "storage_bucket": "connected-gaming-hassign1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34294707109:android:6d030cc9a2b4a2ed77ee4c",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.ConnectedGamingHAssign1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34294707109-lvndiai745elqqsdniics1ko0kplobgq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNVzt_-NxRe2eXZfYiJFZ73BbmVT5HI-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34294707109-lvndiai745elqqsdniics1ko0kplobgq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

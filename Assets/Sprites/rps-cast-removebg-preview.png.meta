@@ -1,0 +1,1992 @@
+fileFormatVersion: 2
+guid: ae6e94517ae634248990f547328cc44a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 572677152473868579
+    second: human_rock_righ
+  - first:
+      213: 8773001707873557213
+    second: rps-cast-removebg-preview_1
+  - first:
+      213: -4925289323645642504
+    second: rps-cast-removebg-preview_2
+  - first:
+      213: 5501887717949614137
+    second: rps-cast-removebg-preview_3
+  - first:
+      213: 4158860087856506391
+    second: rps-cast-removebg-preview_4
+  - first:
+      213: 224755634874396105
+    second: rps-cast-removebg-preview_5
+  - first:
+      213: 5747455036315569879
+    second: skeleton_rock_right
+  - first:
+      213: -2457749088538630301
+    second: rps-cast-removebg-preview_7
+  - first:
+      213: 5109836967999304065
+    second: rps-cast-removebg-preview_8
+  - first:
+      213: 8183056186451329341
+    second: rps-cast-removebg-preview_9
+  - first:
+      213: 4210751730220019910
+    second: rps-cast-removebg-preview_10
+  - first:
+      213: -7249405707645398209
+    second: rps-cast-removebg-preview_11
+  - first:
+      213: -3727390459660942367
+    second: rps-cast-removebg-preview_12
+  - first:
+      213: -8183846036359320439
+    second: human_paper_right
+  - first:
+      213: -7128999132405256859
+    second: rps-cast-removebg-preview_14
+  - first:
+      213: 8635093916247925927
+    second: rps-cast-removebg-preview_15
+  - first:
+      213: 5877056707113112342
+    second: rps-cast-removebg-preview_16
+  - first:
+      213: 7707276715403972766
+    second: rps-cast-removebg-preview_17
+  - first:
+      213: -5197933333114739844
+    second: rps-cast-removebg-preview_18
+  - first:
+      213: 6249076526049288800
+    second: skeleton_paper_right
+  - first:
+      213: -1491695432543864291
+    second: rps-cast-removebg-preview_20
+  - first:
+      213: -871937597142432188
+    second: rps-cast-removebg-preview_21
+  - first:
+      213: -5220499514277940499
+    second: rps-cast-removebg-preview_22
+  - first:
+      213: 6977450630877154923
+    second: rps-cast-removebg-preview_23
+  - first:
+      213: -4381138248867523532
+    second: rps-cast-removebg-preview_24
+  - first:
+      213: -9075273846043097162
+    second: rps-cast-removebg-preview_25
+  - first:
+      213: 1051135701693909284
+    second: human_scissors_right
+  - first:
+      213: -6141709224916595622
+    second: rps-cast-removebg-preview_27
+  - first:
+      213: 824991266415445349
+    second: rps-cast-removebg-preview_28
+  - first:
+      213: -911342414213005229
+    second: rps-cast-removebg-preview_29
+  - first:
+      213: -324592621618330953
+    second: rps-cast-removebg-preview_30
+  - first:
+      213: 5653778520138882264
+    second: rps-cast-removebg-preview_31
+  - first:
+      213: -4662085276207082885
+    second: skeleton_scissors_right
+  - first:
+      213: 4293714928365983574
+    second: rps-cast-removebg-preview_33
+  - first:
+      213: -5419519938736984886
+    second: rps-cast-removebg-preview_34
+  - first:
+      213: -4182727296899149658
+    second: rps-cast-removebg-preview_35
+  - first:
+      213: -1905684445391128726
+    second: rps-cast-removebg-preview_36
+  - first:
+      213: 5181774473143310366
+    second: rps-cast-removebg-preview_37
+  - first:
+      213: -6064011311445492995
+    second: rps-cast-removebg-preview_38
+  - first:
+      213: 4293218851051034859
+    second: human_rock_left
+  - first:
+      213: 5965222020481013151
+    second: rps-cast-removebg-preview_40
+  - first:
+      213: -8839046774809759450
+    second: rps-cast-removebg-preview_41
+  - first:
+      213: 682194340799270469
+    second: rps-cast-removebg-preview_42
+  - first:
+      213: 8244452147942285846
+    second: rps-cast-removebg-preview_43
+  - first:
+      213: -6362832490258490952
+    second: rps-cast-removebg-preview_44
+  - first:
+      213: 3992315941454914686
+    second: skeleton_rock_left
+  - first:
+      213: -3052623566235705283
+    second: rps-cast-removebg-preview_46
+  - first:
+      213: -5862221304434202025
+    second: rps-cast-removebg-preview_47
+  - first:
+      213: -8626869875240254372
+    second: rps-cast-removebg-preview_48
+  - first:
+      213: 1559495934771737529
+    second: rps-cast-removebg-preview_49
+  - first:
+      213: 7670421540163395302
+    second: rps-cast-removebg-preview_50
+  - first:
+      213: 6203718915105173043
+    second: rps-cast-removebg-preview_51
+  - first:
+      213: 1202690697063130827
+    second: human_paper_left
+  - first:
+      213: -2310071593197117550
+    second: rps-cast-removebg-preview_53
+  - first:
+      213: -919303794612823722
+    second: rps-cast-removebg-preview_54
+  - first:
+      213: 3400900966860625495
+    second: rps-cast-removebg-preview_55
+  - first:
+      213: -6148110573530157871
+    second: rps-cast-removebg-preview_56
+  - first:
+      213: -7541763688520101092
+    second: rps-cast-removebg-preview_57
+  - first:
+      213: -2906207149477815860
+    second: skeleton_paper_left
+  - first:
+      213: 237280645888399145
+    second: rps-cast-removebg-preview_59
+  - first:
+      213: -8018085611657893400
+    second: rps-cast-removebg-preview_60
+  - first:
+      213: 3307987677760855321
+    second: rps-cast-removebg-preview_61
+  - first:
+      213: -8510539925750554106
+    second: rps-cast-removebg-preview_62
+  - first:
+      213: -7115428524282371262
+    second: rps-cast-removebg-preview_63
+  - first:
+      213: -3205947000985062788
+    second: rps-cast-removebg-preview_64
+  - first:
+      213: 576433528217964318
+    second: human_scissors_left
+  - first:
+      213: -1225506226129327013
+    second: rps-cast-removebg-preview_66
+  - first:
+      213: -6696770847474710501
+    second: rps-cast-removebg-preview_67
+  - first:
+      213: 8211076674033519625
+    second: rps-cast-removebg-preview_68
+  - first:
+      213: 8666655119912953724
+    second: rps-cast-removebg-preview_69
+  - first:
+      213: -6316523882872808339
+    second: rps-cast-removebg-preview_70
+  - first:
+      213: 5746114989093921843
+    second: skeleton_scissors_left
+  - first:
+      213: 8455921029931175486
+    second: rps-cast-removebg-preview_72
+  - first:
+      213: 7480011071046266361
+    second: rps-cast-removebg-preview_73
+  - first:
+      213: 1586142242065789513
+    second: rps-cast-removebg-preview_74
+  - first:
+      213: -8781656562851744603
+    second: rps-cast-removebg-preview_75
+  - first:
+      213: -2302969403522840273
+    second: rps-cast-removebg-preview_76
+  - first:
+      213: -7635491269890311671
+    second: rps-cast-removebg-preview_77
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: human_rock_righ
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 284
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329ef2406de82f700800000000000000
+      internalID: 572677152473868579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 284
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddad2bb6296ffb970800000000000000
+      internalID: 8773001707873557213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 284
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8d318947bd5abb0800000000000000
+      internalID: -4925289323645642504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 284
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938a87eaab1aa5c40800000000000000
+      internalID: 5501887717949614137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 284
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716ac3f173d37b930800000000000000
+      internalID: 4158860087856506391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 284
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cda4f12f0e7e1300800000000000000
+      internalID: 224755634874396105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_rock_right
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 284
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de8e1a77ef03cf40800000000000000
+      internalID: 5747455036315569879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 284
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3676d96c93254edd0800000000000000
+      internalID: -2457749088538630301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 284
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181f1c936a9c9e640800000000000000
+      internalID: 5109836967999304065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 284
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d318e72fe3e009170800000000000000
+      internalID: 8183056186451329341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 284
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0302d93689f6a30800000000000000
+      internalID: 4210751730220019910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 284
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f335b1bfaefe46b90800000000000000
+      internalID: -7249405707645398209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 284
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3cab02026a54cc0800000000000000
+      internalID: -3727390459660942367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: human_paper_right
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 228
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c605ac3632d6e80800000000000000
+      internalID: -8183846036359320439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 228
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56daae46f05b01d90800000000000000
+      internalID: -7128999132405256859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 228
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a428188a2406d770800000000000000
+      internalID: 8635093916247925927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 228
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613dd48efef7f8150800000000000000
+      internalID: 5877056707113112342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 228
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e901b47765fb5fa60800000000000000
+      internalID: 7707276715403972766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 228
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73a8816c2b3dd7b0800000000000000
+      internalID: -5197933333114739844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_paper_right
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 228
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062666dcdfd29b650800000000000000
+      internalID: 6249076526049288800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 228
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a762e48ee6c4be0800000000000000
+      internalID: -1491695432543864291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 228
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4468408006146e3f0800000000000000
+      internalID: -871937597142432188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 228
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de23d55e95f0d87b0800000000000000
+      internalID: -5220499514277940499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 228
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e02437162e4d060800000000000000
+      internalID: 6977450630877154923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 228
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434df5499f11333c0800000000000000
+      internalID: -4381138248867523532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 228
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7453715862e0280800000000000000
+      internalID: -9075273846043097162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: human_scissors_right
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 172
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429423ef952669e00800000000000000
+      internalID: 1051135701693909284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_27
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 171
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c4b17000444caa0800000000000000
+      internalID: -6141709224916595622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_28
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 171
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5650e719f25f27b00800000000000000
+      internalID: 824991266415445349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_29
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 171
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350461c17e24a53f0800000000000000
+      internalID: -911342414213005229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_30
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 171
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b20abbfab0de7bf0800000000000000
+      internalID: -324592621618330953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_31
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 171
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc9c9beb91467e40800000000000000
+      internalID: 5653778520138882264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_scissors_right
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 171
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72191f5422fc4fb0800000000000000
+      internalID: -4662085276207082885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_33
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 171
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657db007af6569b30800000000000000
+      internalID: 4293714928365983574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_34
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 171
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc6f6e545ff9c4b0800000000000000
+      internalID: -5419519938736984886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_35
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 171
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a01ffb3fa7f3f5c0800000000000000
+      internalID: -4182727296899149658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_36
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 171
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67797af716ad85e0800000000000000
+      internalID: -1905684445391128726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_37
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 171
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18d4e9dd6c59e740800000000000000
+      internalID: 5181774473143310366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_38
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 171
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa375b37dd48dba0800000000000000
+      internalID: -6064011311445492995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: human_rock_left
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 115
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be858ef6cc3949b30800000000000000
+      internalID: 4293218851051034859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_40
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 115
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95db1192d9b8c250800000000000000
+      internalID: 5965222020481013151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_41
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 115
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621f6622ac5655580800000000000000
+      internalID: -8839046774809759450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_42
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 115
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e4f177324a77900800000000000000
+      internalID: 682194340799270469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_43
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 115
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6126ecd2c8d2a6270800000000000000
+      internalID: 8244452147942285846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_44
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 115
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b914d4df8da2b7a0800000000000000
+      internalID: -6362832490258490952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_rock_left
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 115
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74ac81523e876730800000000000000
+      internalID: 3992315941454914686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_46
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 115
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30e88d3a07e2a5d0800000000000000
+      internalID: -3052623566235705283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_47
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 115
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ae87278c435aea0800000000000000
+      internalID: -5862221304434202025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_48
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 115
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5449ca3e83374880800000000000000
+      internalID: -8626869875240254372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_49
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 115
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b33cb44a4174a510800000000000000
+      internalID: 1559495934771737529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_50
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 115
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee91fa40cfc27a60800000000000000
+      internalID: 7670421540163395302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_51
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 115
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e273d0c79081650800000000000000
+      internalID: 6203718915105173043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: human_paper_left
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 58
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc66d1d11d0d0b010800000000000000
+      internalID: 1202690697063130827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_53
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 58
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29fd3c1102af0ffd0800000000000000
+      internalID: -2310071593197117550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_54
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 58
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6591f69c11afd33f0800000000000000
+      internalID: -919303794612823722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_55
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 58
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756920e196d623f20800000000000000
+      internalID: 3400900966860625495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_56
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 58
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc69e8e1068daaa0800000000000000
+      internalID: -6148110573530157871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_57
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 58
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13d1dd12e5465790800000000000000
+      internalID: -7541763688520101092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_paper_left
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 58
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc99cabcef31ba7d0800000000000000
+      internalID: -2906207149477815860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_59
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 58
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927d0428d7dfa4300800000000000000
+      internalID: 237280645888399145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_60
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 58
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9e57a2e990ab090800000000000000
+      internalID: -8018085611657893400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_61
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 58
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d1e46344558ed20800000000000000
+      internalID: 3307987677760855321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_62
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 58
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602ebde370d74e980800000000000000
+      internalID: -8510539925750554106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_63
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 58
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243a771d47be04d90800000000000000
+      internalID: -7115428524282371262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_64
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 58
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c727e8d30303283d0800000000000000
+      internalID: -3205947000985062788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: human_scissors_left
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f8e066d37eff700800000000000000
+      internalID: 576433528217964318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_66
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 2
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c288194902efee0800000000000000
+      internalID: -1225506226129327013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_67
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 2
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18041e256a4013a0800000000000000
+      internalID: -6696770847474710501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_68
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 2
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c834b1bba93f170800000000000000
+      internalID: 8211076674033519625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_69
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 2
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c776b35e9e4264870800000000000000
+      internalID: 8666655119912953724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_70
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c5812bef23758a0800000000000000
+      internalID: -6316523882872808339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_scissors_left
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 2
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334ad7b632d4ebf40800000000000000
+      internalID: 5746114989093921843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_72
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 2
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e8dc51067795570800000000000000
+      internalID: 8455921029931175486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_73
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 2
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fda3b530765ec760800000000000000
+      internalID: 7480011071046266361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_74
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 2
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942b29527fb130610800000000000000
+      internalID: 1586142242065789513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_75
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 2
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a47ebf12e9412680800000000000000
+      internalID: -8781656562851744603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_76
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f298d6677853a00e0800000000000000
+      internalID: -2302969403522840273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rps-cast-removebg-preview_77
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 2
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a77940529490690800000000000000
+      internalID: -7635491269890311671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

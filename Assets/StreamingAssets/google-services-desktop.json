@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "388017620282",
+    "firebase_url": "https://cgassignment2-de6ca-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "cgassignment2-de6ca",
+    "storage_bucket": "cgassignment2-de6ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388017620282:android:321ba8bee04be73c01bc03",
+        "android_client_info": {
+          "package_name": "com.CGAssignment2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388017620282-d80ehoof8im3m0uen1l8fev7bs83ub70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe4175Fgp4c5lSdizCvx7RI7yi4HGookQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388017620282-d80ehoof8im3m0uen1l8fev7bs83ub70.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
