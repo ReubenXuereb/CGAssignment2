@@ -185,13 +185,61 @@ public class FirebaseConfig : MonoBehaviour
         if (mainPlayer)
         {
             myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player1").Child("rps").SetValueAsync(choice);
-            print("jien qed nahdem ta p1");
+            if (choice == "Rock")
+            {
+                GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP1[0];
+            }
+            if (choice == "Paper")
+            {
+                GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP1[1];
+            }
+            if (choice == "Scissors")
+            {
+                GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP1[2];
+            }
+            //print("jien qed nahdem ta p1");
         }
         else
         {
             myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player2").Child("rps").SetValueAsync(choice);
-            print("jien qed nahdem ta p2");
+            if (choice == "Rock")
+            {
+                GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP2[0];
+            }
+            if (choice == "Paper")
+            {
+                GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP2[1];
+            }
+            if (choice == "Scissors")
+            {
+                GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP2[2];
+            }
+            //print("jien qed nahdem ta p2");
         }
+    }
+
+    public void setPlayerSprite(string sprite)
+    {
+        if (mainPlayer)
+        {
+            myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player1").Child("rps").ValueChanged += handlePlayerSprite;
+            //print("jien qed nahdem ta p1");
+        }
+        else
+        {
+            myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player2").Child("rps").ValueChanged += handlePlayerSprite;
+            //print("jien qed nahdem ta p2");
+        }
+    }
+
+    public void handlePlayerSprite(object sender, ValueChangedEventArgs args)
+    {
+        if (args.DatabaseError != null)
+        {
+            Debug.LogError(args.DatabaseError.Message);
+            return;
+        }
+        
     }
 
     public void updatePlayerListener()
@@ -307,6 +355,7 @@ public class FirebaseConfig : MonoBehaviour
             myDB.Child("Rooms").Child(roomKey).Child("isRoundOver").SetValueAsync(false);
         }
     }
+
 
     void handlePlayerChoice(object sender, ValueChangedEventArgs args)
     {

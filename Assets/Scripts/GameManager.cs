@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] Text scoreP1;
     [SerializeField] Text scoreP2;
     [SerializeField] Text winner;
-    [SerializeField] Sprite[] showSpriteP1;
-    [SerializeField] Sprite[] showSpriteP2;
+    [SerializeField] public Sprite[] showSpriteP1;
+    [SerializeField] public Sprite[] showSpriteP2;
     [SerializeField] GameObject rockButton;
     [SerializeField] GameObject paperButton;
     [SerializeField] GameObject scissorsButton;
@@ -91,6 +91,36 @@ public class GameManager : MonoBehaviour
     {
         switchButtonsOnOff = false;
         GameObject.Find("FirebaseConfig").GetComponent<FirebaseConfig>().setPlayerChoice(rps);
+        //if (FirebaseConfig.mainPlayer)
+        //{
+        //    if(rps == "Rock")
+        //    {
+        //        GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = showSpriteP1[0];
+        //    }
+        //    if (rps == "Paper")
+        //    {
+        //        GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = showSpriteP1[1];
+        //    }
+        //    if (rps == "Scissors")
+        //    {
+        //        GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = showSpriteP1[2];
+        //    }
+        //}
+        //else
+        //{
+        //    if (rps == "Rock")
+        //    {
+        //        GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = showSpriteP2[0];
+        //    }
+        //    if (rps == "Paper")
+        //    {
+        //        GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = showSpriteP2[1];
+        //    }
+        //    if (rps == "Scissors")
+        //    {
+        //        GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = showSpriteP2[2];
+        //    }
+        //}
     }
 
 
@@ -154,6 +184,16 @@ public class GameManager : MonoBehaviour
         {
             GameObject.Find("WinnerText").GetComponent<Text>().text = "Winner is: " + winner;
         }
+    }
+
+    public void changeSprite()
+    {
+
+    }
+
+    public void storeButton()
+    {
+        SceneManager.LoadScene("Store");
     }
 
     public void BackButton()

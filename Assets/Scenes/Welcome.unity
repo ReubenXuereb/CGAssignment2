@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 317070705}
   - component: {fileID: 317070704}
   m_Layer: 5
-  m_Name: Button
+  m_Name: StoreButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -752,7 +752,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 317070705}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1449264336}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: storeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &317070705
 MonoBehaviour:
   m_ObjectHideFlags: 0
