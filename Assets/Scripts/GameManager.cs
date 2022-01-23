@@ -12,9 +12,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] Button startGameBtn;
 
     [SerializeField] TMP_Text player2text;
-    [SerializeField] Text scoreP1;
-    [SerializeField] Text scoreP2;
-    [SerializeField] Text winner;
     [SerializeField] public Sprite[] showSpriteP1;
     [SerializeField] public Sprite[] showSpriteP2;
     [SerializeField] GameObject rockButton;
@@ -33,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     //DLC_Script DLC;
 
-    FirebaseConfig firebse;
+    FirebaseConfig firebseConfig;
 
     public void Awake() 
     {
@@ -58,13 +55,26 @@ public class GameManager : MonoBehaviour
             paperButton = GameObject.Find("PaperButton");
             scissorsButton = GameObject.Find("ScissorsButton");
         }
+        if(SceneManager.GetActiveScene().name == "GameOver")
+        {
+            Objects playerData = firebseConfig.getPlayerData();
+            if(playerData._player1.score > playerData._player2.score)
+            {
+                firebseConfig.handleWinnerText(playerData._player1.playerName);
+                GameObject.Find("WinnerText").GetComponent<Text>().text = "Winner is: " + playerData._player1.playerName;
+            }
+            if (playerData._player2.score > playerData._player1.score)
+            {
+                firebseConfig.handleWinnerText(playerData._player2.playerName);
+                GameObject.Find("WinnerText").GetComponent<Text>().text = "Winner is: " + playerData._player2.playerName;
+            }
+            if (playerData._player1.score == playerData._player2.score)
+            {
+                firebseConfig.handleWinnerText(playerData._player2.playerName);
+                GameObject.Find("WinnerText").GetComponent<Text>().text = "Draw";
+            }
+        }
     }
-
-    void Update()
-    {
-       
-    }
-
     public void showPlayButton() {
 
         if (SceneManager.GetActiveScene().name == "RoomLobby")
@@ -91,36 +101,6 @@ public class GameManager : MonoBehaviour
     {
         switchButtonsOnOff = false;
         GameObject.Find("FirebaseConfig").GetComponent<FirebaseConfig>().setPlayerChoice(rps);
-        //if (FirebaseConfig.mainPlayer)
-        //{
-        //    if(rps == "Rock")
-        //    {
-        //        GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = showSpriteP1[0];
-        //    }
-        //    if (rps == "Paper")
-        //    {
-        //        GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = showSpriteP1[1];
-        //    }
-        //    if (rps == "Scissors")
-        //    {
-        //        GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = showSpriteP1[2];
-        //    }
-        //}
-        //else
-        //{
-        //    if (rps == "Rock")
-        //    {
-        //        GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = showSpriteP2[0];
-        //    }
-        //    if (rps == "Paper")
-        //    {
-        //        GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = showSpriteP2[1];
-        //    }
-        //    if (rps == "Scissors")
-        //    {
-        //        GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = showSpriteP2[2];
-        //    }
-        //}
     }
 
 
@@ -178,17 +158,38 @@ public class GameManager : MonoBehaviour
         GameObject.Find("CurrentRoundText").GetComponent<Text>().text = "Round: " + round;
     }
 
-    public void winnerText(string winner)
+    public void changeSprite(string p1Choice, string p2Choice)
     {
-        if (SceneManager.GetActiveScene().name == "Game Over")
+        if (FirebaseConfig.mainPlayer)
         {
-            GameObject.Find("WinnerText").GetComponent<Text>().text = "Winner is: " + winner;
+            if (p1Choice == "Rock")
+            {
+                GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = showSpriteP1[0];
+            }
+            if (p1Choice == "Paper")
+            {
+                GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = showSpriteP1[1];
+            }
+            if (p1Choice == "Scissors")
+            {
+                GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = showSpriteP1[2];
+            }
         }
-    }
-
-    public void changeSprite()
-    {
-
+        else if(!FirebaseConfig.mainPlayer)
+        {
+            if (p2Choice == "Rock")
+            {
+                GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = showSpriteP2[0];
+            }
+            if (p2Choice == "Paper")
+            {
+                GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = showSpriteP2[1];
+            }
+            if (p2Choice == "Scissors")
+            {
+                GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = showSpriteP2[2];
+            }
+        }
     }
 
     public void storeButton()
