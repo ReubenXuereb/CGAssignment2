@@ -1054,13 +1054,28 @@ MonoBehaviour:
     rps: 
     uniqueID: 
     score: 0
+    moves: 0
   player2:
     playerName: 
     rps: 
     uniqueID: 
     score: 0
+    moves: 0
   currentRound: 1
   doneOnce: 0
+  playerData:
+    _player1:
+      playerName: 
+      rps: 
+      uniqueID: 
+      score: 0
+      moves: 0
+    _player2:
+      playerName: 
+      rps: 
+      uniqueID: 
+      score: 0
+      moves: 0
 --- !u!4 &601391520
 Transform:
   m_ObjectHideFlags: 0
@@ -1456,9 +1471,6 @@ MonoBehaviour:
   roomeCodeText: {fileID: 112475024}
   startGameBtn: {fileID: 0}
   player2text: {fileID: 0}
-  scoreP1: {fileID: 0}
-  scoreP2: {fileID: 0}
-  winner: {fileID: 0}
   showSpriteP1:
   - {fileID: 1202690697063130827, guid: ae6e94517ae634248990f547328cc44a, type: 3}
   - {fileID: 4293218851051034859, guid: ae6e94517ae634248990f547328cc44a, type: 3}
@@ -1477,6 +1489,7 @@ MonoBehaviour:
   switchButtonsOnOff: 0
   playerWinner: 0
   rounds: 5
+  timer: 0
 --- !u!4 &1449264337
 Transform:
   m_ObjectHideFlags: 0

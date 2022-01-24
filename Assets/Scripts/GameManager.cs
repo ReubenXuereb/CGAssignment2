@@ -60,54 +60,54 @@ public class GameManager : MonoBehaviour
         }
         if(SceneManager.GetActiveScene().name == "GameOver")
         {
-            getPlayerData();
+            //getPlayerData();
            
         }
     }
-    public void getPlayerData()
-    {
-        FirebaseConfig.myDB.Child("Rooms").Child(FirebaseConfig.roomKey).Child("objects").GetValueAsync().ContinueWithOnMainThread(task =>
-        {
-            if (task.IsFaulted)
-            {
-                print("something went wrong");
-            }
-            else if (task.IsCompleted)
-            {
-                DataSnapshot snapshot = task.Result;
-                Player p1 = new Player(snapshot.Child("_player1").Child("playerName").Value.ToString(), "", "", int.Parse(snapshot.Child("_player1").Child("playerName").Value.ToString()), 0);
-                Player p2 = new Player(snapshot.Child("_player2").Child("playerName").Value.ToString(), "", "", 0, 0);
-                //Player p2Moves = new Player("", "", "", 0, snapshot.Child("_player2").Child("moves").Value.ToString());
+    //public void getPlayerData()
+    //{
+    //    FirebaseConfig.myDB.Child("Rooms").Child(FirebaseConfig.roomKey).Child("objects").GetValueAsync().ContinueWithOnMainThread(task =>
+    //    {
+    //        if (task.IsFaulted)
+    //        {
+    //            print("something went wrong");
+    //        }
+    //        else if (task.IsCompleted)
+    //        {
+    //            DataSnapshot snapshot = task.Result;
+    //            Player p1 = new Player(snapshot.Child("_player1").Child("playerName").Value.ToString(), "", "", int.Parse(snapshot.Child("_player1").Child("playerName").Value.ToString()), 0);
+    //            Player p2 = new Player(snapshot.Child("_player2").Child("playerName").Value.ToString(), "", "", 0, 0);
+    //            //Player p2Moves = new Player("", "", "", 0, snapshot.Child("_player2").Child("moves").Value.ToString());
 
-                Objects playerData = new Objects(p1, p2);
-                print("p1 name: " + playerData._player1.playerName);
-                print("p2 name: " + playerData._player2.playerName);
+    //            Objects playerData = new Objects(p1, p2);
+    //            print("p1 name: " + playerData._player1.playerName);
+    //            print("p2 name: " + playerData._player2.playerName);
 
-                Debug.Log(playerData._player1.score);
-                Debug.Log(playerData._player2.score);
-                if (playerData._player1.score > playerData._player2.score)
-                {
+    //            Debug.Log(playerData._player1.score);
+    //            Debug.Log(playerData._player2.score);
+    //            if (playerData._player1.score > playerData._player2.score)
+    //            {
 
-                    GameObject.Find("WinnerText").GetComponent<Text>().text = "Winner is: " + playerData._player1.playerName;
-                    print("hdimt");
-                }
-                else if (playerData._player2.score > playerData._player1.score)
-                {
+    //                GameObject.Find("WinnerText").GetComponent<Text>().text = "Winner is: " + playerData._player1.playerName;
+    //                print("hdimt");
+    //            }
+    //            else if (playerData._player2.score > playerData._player1.score)
+    //            {
 
-                    GameObject.Find("WinnerText").GetComponent<Text>().text = "Winner is: " + playerData._player2.playerName;
-                }
-                else if (playerData._player1.score == playerData._player2.score)
-                {
+    //                GameObject.Find("WinnerText").GetComponent<Text>().text = "Winner is: " + playerData._player2.playerName;
+    //            }
+    //            else if (playerData._player1.score == playerData._player2.score)
+    //            {
 
-                    GameObject.Find("WinnerText").GetComponent<Text>().text = "Draw";
-                }
-                else
-                {
-                    Debug.Log("gol else:  " +playerData._player1.score);
-                }
-            }
-        });
-    }
+    //                GameObject.Find("WinnerText").GetComponent<Text>().text = "Draw";
+    //            }
+    //            else
+    //            {
+    //                Debug.Log("gol else:  " +playerData._player1.score);
+    //            }
+    //        }
+    //    });
+    //}
     public void showPlayButton() {
 
         if (SceneManager.GetActiveScene().name == "RoomLobby")

@@ -67,7 +67,7 @@ public class GameRoom
 
 public class FirebaseConfig : MonoBehaviour
 {
-   [SerializeField] TMP_InputField joinRoomCode;
+    [SerializeField] TMP_InputField joinRoomCode;
 
     public Player player1;
     public Player player2;
@@ -99,14 +99,18 @@ public class FirebaseConfig : MonoBehaviour
         player2joined = false;
         myDB = FirebaseDatabase.DefaultInstance.RootReference;
         DontDestroyOnLoad(this.gameObject);
+        currentRound = 1;
     }
 
     private void Update()
     {
-        if (timerActive)
+        if (SceneManager.GetActiveScene().name == "Game")
         {
-            timer += Time.deltaTime;
-            print(timer);
+            if (timerActive)
+            {
+                timer += Time.deltaTime;
+                print(timer);
+            }
         }
     }
 
@@ -129,7 +133,7 @@ public class FirebaseConfig : MonoBehaviour
         player1 = new Player("Player1", "", key, 0, 0);
         Objects objects = new Objects(player1, null);
 
-        GameRoom room = new GameRoom(objects, false, false, "", 0, false, 0);
+        GameRoom room = new GameRoom(objects, false, false, "", 1, false, 0);
         string json = JsonUtility.ToJson(room);
         //print(json);
 
@@ -179,8 +183,7 @@ public class FirebaseConfig : MonoBehaviour
     }
 
     public void player2JoinedListener()
-    {
-
+    { 
         myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player2").Child("playerName").ValueChanged += handlePlayer2Joined;
     }
 
@@ -207,7 +210,7 @@ public class FirebaseConfig : MonoBehaviour
             myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player1").Child("rps").SetValueAsync(choice);
             player1.moves++;
             myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player1").Child("moves").SetValueAsync(player1.moves);
-            p1Moves = player1.moves;   
+            p1Moves = player1.moves;
         }
         else
         {
@@ -371,8 +374,6 @@ public class FirebaseConfig : MonoBehaviour
             return;
         }
         string p1Choice = args.Snapshot.Child("_player1").Child("rps").Value.ToString();
-        //string p1Choce = args.Snapshot.Child("_player1").Child("moves").Value.ToString();
-        //print(p1Choce);
         string p2Choice = args.Snapshot.Child("_player2").Child("rps").Value.ToString();
         //GameObject whoWonText = GameObject.Find("WhoWonRoundText");
         //whoWonText.SetActive(false);
@@ -389,6 +390,8 @@ public class FirebaseConfig : MonoBehaviour
             if(winner == 1 && mainPlayer)
             {
                 player1.score++;
+                currentRound++;
+                myDB.Child("Rooms").Child(roomKey).Child("currentRound").SetValueAsync(currentRound);
                 myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player1").Child("score").SetValueAsync(player1.score);
             }
             if (winner == 1)
@@ -400,6 +403,8 @@ public class FirebaseConfig : MonoBehaviour
             if(winner == 2 && mainPlayer)
             {
                 player2.score++;
+                currentRound++;
+                myDB.Child("Rooms").Child(roomKey).Child("currentRound").SetValueAsync(currentRound);
                 myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player2").Child("score").SetValueAsync(player2.score);
             }
             if (winner == 2)
@@ -408,15 +413,21 @@ public class FirebaseConfig : MonoBehaviour
                 //whoWonText.SetActive(true);
                 GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Player 2 won this round";
             }
-            if (winner == 0)
+            if (winner == 0 && mainPlayer)
+            {
+                currentRound++;
+                myDB.Child("Rooms").Child(roomKey).Child("currentRound").SetValueAsync(currentRound);
+                //whoWonText.SetActive(true);
+                //GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Draw";
+            }
+            if(winner == 0 && mainPlayer)
             {
                 print("Draw");
                 //whoWonText.SetActive(true);
                 GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Draw";
             }
-            currentRound++;
             //whoWonText.SetActive(false);
-            myDB.Child("Rooms").Child(roomKey).Child("currentRound").SetValueAsync(currentRound);
+
             myDB.Child("Rooms").Child(roomKey).Child("isRoundOver").SetValueAsync(true);
             myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player1").Child("rps").SetValueAsync("");
             myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player2").Child("rps").SetValueAsync("");
@@ -444,7 +455,7 @@ public class FirebaseConfig : MonoBehaviour
                 string winner = snapshot.Child("winner").Value.ToString();
                 string totalTimeOfGame = snapshot.Child("timer").Value.ToString();
 
-                string DataString = "MatchID: " + matchID.ToString() + "\nWinner: " + winner.ToString() + "\nP1 moves: " + movesP1.ToString() + "\nP2 moves: " + movesP2.ToString() + 
+                string DataString = "MatchID: " + matchID.ToString() + "\nWinner: " + winner.ToString() + "\nP1 moves: " + movesP1.ToString() + "\nP2 moves: " + movesP2.ToString() +
                                     "\nTime of game: " + totalTimeOfGame.ToString();
 
                 FirebaseStorage storage = FirebaseStorage.DefaultInstance;
@@ -464,7 +475,8 @@ public class FirebaseConfig : MonoBehaviour
 
 
         yield return textFileRef.PutBytesAsync(data)
-    .ContinueWithOnMainThread((task) => {
+    .ContinueWithOnMainThread((task) =>
+    {
         if (task.IsFaulted || task.IsCanceled)
         {
             Debug.Log(task.Exception.ToString());
