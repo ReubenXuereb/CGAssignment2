@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public string p2Choice;
     public bool switchButtonsOnOff;
     public int playerWinner;
-    public int rounds = 5;
+    public int rounds;
     public float timer;
     
     GameObject Player1;
@@ -57,12 +57,13 @@ public class GameManager : MonoBehaviour
             rockButton = GameObject.Find("RockButton");
             paperButton = GameObject.Find("PaperButton");
             scissorsButton = GameObject.Find("ScissorsButton");
+            rounds = 5;
         }
-        if(SceneManager.GetActiveScene().name == "GameOver")
-        {
-            //getPlayerData();
+        //if(SceneManager.GetActiveScene().name == "GameOver")
+        //{
+        //    //getPlayerData();
            
-        }
+        //}
     }
     //public void getPlayerData()
     //{
@@ -186,6 +187,25 @@ public class GameManager : MonoBehaviour
         GameObject.Find("P2Score").GetComponent<Text>().text = "P2: " + score;
     }
 
+    public void surrenderButton()
+    {
+        StartCoroutine(surrender(2f));
+    }
+    IEnumerator surrender(float seconds)
+    {
+        if (FirebaseConfig.mainPlayer)
+        {
+            GameObject.Find("FirebaseConfig").GetComponent<FirebaseConfig>().handleSurrendor();
+            yield return new WaitForSeconds(seconds);
+            SceneManager.LoadScene("GameOver");
+        }
+        else
+        {
+            GameObject.Find("FirebaseConfig").GetComponent<FirebaseConfig>().handleSurrendor();
+            yield return new WaitForSeconds(seconds);
+            SceneManager.LoadScene("GameOver");
+        }
+    }
     public void roundText(int round)
     {
         GameObject.Find("CurrentRoundText").GetComponent<Text>().text = "Round: " + round;

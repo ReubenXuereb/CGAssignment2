@@ -87,7 +87,7 @@ public class FirebaseConfig : MonoBehaviour
     public Objects playerData;
     public static int p1Moves;
     public static int p2Moves;
-    public static float timer = 0;
+    public static float timer;
     public bool timerActive = false;
 
     public static DatabaseReference myDB;
@@ -104,14 +104,13 @@ public class FirebaseConfig : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Game")
+
+        if (timerActive)
         {
-            if (timerActive)
-            {
-                timer += Time.deltaTime;
-                print(timer);
-            }
+            timer += Time.deltaTime;
+            print(timer);
         }
+        
     }
 
     public void createGame() 
@@ -269,6 +268,11 @@ public class FirebaseConfig : MonoBehaviour
 
     }
 
+    public void handleSurrendor()
+    {
+        myDB.Child("Rooms").Child(roomKey).Child("currentRound").ValueChanged += handleRounds;
+    }
+
 
     IEnumerator waitForTransition(float seconds)
     {
@@ -308,7 +312,9 @@ public class FirebaseConfig : MonoBehaviour
 
     }
 
-    void handleRounds(object sender, ValueChangedEventArgs args)
+    
+
+   public void handleRounds(object sender, ValueChangedEventArgs args)
     {
 
         if (args.DatabaseError != null)
@@ -334,7 +340,7 @@ public class FirebaseConfig : MonoBehaviour
             {
                //winner = player2.playerName;
                //print(player2.playerName);
-                myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync("Player 2");
+                myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync("Player2");
                 winner = "Player 2";
                 GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Player 2 won !!";
 
@@ -344,9 +350,14 @@ public class FirebaseConfig : MonoBehaviour
             //    winner = "Draw";
             //    myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync("Draw");
             //}
+            if (mainPlayer)
+            {
+                myDB.Child("Rooms").Child(roomKey).Child("timer").SetValueAsync(timer);
+                print(timer);
+            }
             timerActive = false;
-            myDB.Child("Rooms").Child(roomKey).Child("timer").SetValueAsync(timer);
             StartCoroutine(waitForTransition(2f));
+
         }
     }
 
@@ -453,7 +464,7 @@ public class FirebaseConfig : MonoBehaviour
                 string movesP1 = p1Moves + "";
                 string movesP2 = p2Moves + "";
                 string winner = snapshot.Child("winner").Value.ToString();
-                string totalTimeOfGame = snapshot.Child("timer").Value.ToString();
+                string totalTimeOfGame = timer.ToString();
 
                 string DataString = "MatchID: " + matchID.ToString() + "\nWinner: " + winner.ToString() + "\nP1 moves: " + movesP1.ToString() + "\nP2 moves: " + movesP2.ToString() +
                                     "\nTime of game: " + totalTimeOfGame.ToString();
@@ -490,6 +501,11 @@ public class FirebaseConfig : MonoBehaviour
             //Debug.Log("md5 hash = " + md5Hash);
         }
     });
+    }
+
+    public void addPurchases(string itemName)
+    {
+        myDB.Child("Purchased_Items").Child(itemName).Push().SetValueAsync("Item");
     }
 
 }

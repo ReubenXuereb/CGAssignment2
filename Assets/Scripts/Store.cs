@@ -38,6 +38,8 @@ public class Store : MonoBehaviour
             StorageReference sr = storage.GetReferenceFromUrl("gs://cgassignment2-de6ca.appspot.com");
             StorageReference reference = sr.Child("Lake.jpg");
             GameObject.Find("WalletText").GetComponent<Text>().text = "Wallet: " + coins+ " coins";
+            GameObject.Find("FirebaseConfig").GetComponent<FirebaseConfig>().addPurchases("Lake");
+
 
             downloadBackgorundImages(reference);
         }
@@ -51,6 +53,8 @@ public class Store : MonoBehaviour
             StorageReference sr = storage.GetReferenceFromUrl("gs://cgassignment2-de6ca.appspot.com");
             StorageReference reference = sr.Child("tower.jpg");
             GameObject.Find("WalletText").GetComponent<Text>().text = "Wallet: " + coins + " coins";
+            GameObject.Find("FirebaseConfig").GetComponent<FirebaseConfig>().addPurchases("Tower");
+
 
             downloadBackgorundImages(reference);
         }
@@ -65,6 +69,8 @@ public class Store : MonoBehaviour
             StorageReference sr = storage.GetReferenceFromUrl("gs://cgassignment2-de6ca.appspot.com");
             StorageReference reference = sr.Child("looking.jpg");
             GameObject.Find("WalletText").GetComponent<Text>().text = "Wallet: " + coins + " coins";
+            GameObject.Find("FirebaseConfig").GetComponent<FirebaseConfig>().addPurchases("Looking");
+
 
             downloadBackgorundImages(reference);
         }
