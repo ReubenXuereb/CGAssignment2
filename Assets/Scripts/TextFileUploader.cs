@@ -22,39 +22,40 @@ public class TextFileUploader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _matchId = FirebaseConfig.roomKey;
-        _winner = FirebaseConfig.winner;
-        _p1Moves = FirebaseConfig.p1Moves;
-        _p2Moves = FirebaseConfig.p2Moves;
-       // _score = 
-        FirebaseStorage storage = FirebaseStorage.DefaultInstance;
-        StorageReference storageRef = storage.RootReference;
-        string DataString = "MatchID: " + _matchId.ToString() + "\nWinner: " + _winner.ToString() + "\nP1 moves: " + _p1Moves.ToString() + "\nP2 moves: " + _p2Moves.ToString();
-        Debug.Log(DataString);
-        byte[] data = Encoding.ASCII.GetBytes(DataString);
-        StartCoroutine(UploadTextFile(data, storageRef));
+        // _matchId = FirebaseConfig.roomKey;
+        // _winner = FirebaseConfig.winner;
+        // _p1Moves = FirebaseConfig.p1Moves;
+        // _p2Moves = FirebaseConfig.p2Moves;
+        //// _score = 
+        // FirebaseStorage storage = FirebaseStorage.DefaultInstance;
+        // StorageReference storageRef = storage.RootReference;
+        // string DataString = "MatchID: " + _matchId.ToString() + "\nWinner: " + _winner.ToString() + "\nP1 moves: " + _p1Moves.ToString() + "\nP2 moves: " + _p2Moves.ToString();
+        // Debug.Log(DataString);
+        // byte[] data = Encoding.ASCII.GetBytes(DataString);
+        // StartCoroutine(UploadTextFile(data, storageRef));
+        GameObject.Find("GameManager").GetComponent<FirebaseConfig>().uploadTextFileData();
     }
 
-    private IEnumerator UploadTextFile(byte[] data, StorageReference reference)
-    {
+    //private IEnumerator UploadTextFile(byte[] data, StorageReference reference)
+    //{
         
-        StorageReference textFileRef = reference.Child("Text files").Child("test.txt");
+    //    StorageReference textFileRef = reference.Child("Text files").Child("test.txt");
 
         
-        yield return textFileRef.PutBytesAsync(data)
-    .ContinueWithOnMainThread((task) => {
-        if (task.IsFaulted || task.IsCanceled)
-        {
-            Debug.Log(task.Exception.ToString());
+    //    yield return textFileRef.PutBytesAsync(data)
+    //.ContinueWithOnMainThread((task) => {
+    //    if (task.IsFaulted || task.IsCanceled)
+    //    {
+    //        Debug.Log(task.Exception.ToString());
            
-        }
-        else
-        {
-            StorageMetadata metadata = task.Result;
-            string md5Hash = metadata.Md5Hash;
-            Debug.Log("Finished uploading...");
-            //Debug.Log("md5 hash = " + md5Hash);
-        }
-    });
-    }
+    //    }
+    //    else
+    //    {
+    //        StorageMetadata metadata = task.Result;
+    //        string md5Hash = metadata.Md5Hash;
+    //        Debug.Log("Finished uploading...");
+    //        //Debug.Log("md5 hash = " + md5Hash);
+    //    }
+    //});
+    //}
 }

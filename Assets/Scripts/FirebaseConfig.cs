@@ -8,6 +8,7 @@ using Firebase.Extensions;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Text;
 
 [Serializable]
 public class Player 
@@ -50,8 +51,9 @@ public class GameRoom
     public string winner;
     public int currentRound;
     public bool isRoundOver;
+    public float timer;
 
-    public GameRoom(Objects objects, bool gameHasStarted, bool gameWon, string winner, int currentRound, bool isRoundOver)
+    public GameRoom(Objects objects, bool gameHasStarted, bool gameWon, string winner, int currentRound, bool isRoundOver, float timer)
     {
         this.objects = objects;
         this.gameHasStarted = gameHasStarted;
@@ -59,12 +61,13 @@ public class GameRoom
         this.winner = winner;
         this.currentRound = currentRound;
         this.isRoundOver = isRoundOver;
+        this.timer = timer;
     }
 }
 
 public class FirebaseConfig : MonoBehaviour
 {
-    [SerializeField] TMP_InputField joinRoomCode;
+   [SerializeField] TMP_InputField joinRoomCode;
 
     public Player player1;
     public Player player2;
@@ -84,6 +87,8 @@ public class FirebaseConfig : MonoBehaviour
     public Objects playerData;
     public static int p1Moves;
     public static int p2Moves;
+    public static float timer = 0;
+    public bool timerActive = false;
 
     public static DatabaseReference myDB;
     // Start is called before the first frame update
@@ -94,6 +99,15 @@ public class FirebaseConfig : MonoBehaviour
         player2joined = false;
         myDB = FirebaseDatabase.DefaultInstance.RootReference;
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    private void Update()
+    {
+        if (timerActive)
+        {
+            timer += Time.deltaTime;
+            print(timer);
+        }
     }
 
     public void createGame() 
@@ -115,7 +129,7 @@ public class FirebaseConfig : MonoBehaviour
         player1 = new Player("Player1", "", key, 0, 0);
         Objects objects = new Objects(player1, null);
 
-        GameRoom room = new GameRoom(objects, false, false, "", 0, false);
+        GameRoom room = new GameRoom(objects, false, false, "", 0, false, 0);
         string json = JsonUtility.ToJson(room);
         //print(json);
 
@@ -139,6 +153,7 @@ public class FirebaseConfig : MonoBehaviour
     {
         yield return myDB.Child("Rooms").Child(roomKey).Child("gameHasStarted").SetValueAsync(true);
         print("gameHasStarted set to True");
+        timerActive = true;
         SceneManager.LoadScene("Game");
     }
     public void gameHasStartedListener(string roomcode)
@@ -192,21 +207,7 @@ public class FirebaseConfig : MonoBehaviour
             myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player1").Child("rps").SetValueAsync(choice);
             player1.moves++;
             myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player1").Child("moves").SetValueAsync(player1.moves);
-            p1Moves = player1.moves;
-            //print("p1" + moves);
-            //if (choice == "Rock")
-            //{
-            //    GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP1[0];
-            //}
-            //if (choice == "Paper")
-            //{
-            //    GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP1[1];
-            //}
-            //if (choice == "Scissors")
-            //{
-            //    GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP1[2];
-            //}
-            //print("jien qed nahdem ta p1");
+            p1Moves = player1.moves;   
         }
         else
         {
@@ -215,19 +216,6 @@ public class FirebaseConfig : MonoBehaviour
             myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player2").Child("moves").SetValueAsync(player2.moves);
             p2Moves = player2.moves;
             print("p2 " + p2Moves);
-            //if (choice == "Rock")
-            //{
-            //    GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP2[0];
-            //}
-            //if (choice == "Paper")
-            //{
-            //    GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP2[1];
-            //}
-            //if (choice == "Scissors")
-            //{
-            //    GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP2[2];
-            //}
-            //print("jien qed nahdem ta p2");
         }
     }
 
@@ -353,6 +341,8 @@ public class FirebaseConfig : MonoBehaviour
             //    winner = "Draw";
             //    myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync("Draw");
             //}
+            timerActive = false;
+            myDB.Child("Rooms").Child(roomKey).Child("timer").SetValueAsync(timer);
             StartCoroutine(waitForTransition(2f));
         }
     }
@@ -432,5 +422,62 @@ public class FirebaseConfig : MonoBehaviour
             myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player2").Child("rps").SetValueAsync("");
         }
     }
-  
+
+    public void uploadTextFileData()
+    {
+        myDB.Child("Rooms").Child(roomKey).GetValueAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.IsFaulted)
+            {
+                print("ma hadimx");
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+                int p1Moves = int.Parse(snapshot.Child("objects").Child("_player1").Child("moves").Value.ToString());
+                int p2Moves = int.Parse(snapshot.Child("objects").Child("_player2").Child("moves").Value.ToString());
+
+
+                string matchID = roomKey;
+                string movesP1 = p1Moves + "";
+                string movesP2 = p2Moves + "";
+                string winner = snapshot.Child("winner").Value.ToString();
+                string totalTimeOfGame = snapshot.Child("timer").Value.ToString();
+
+                string DataString = "MatchID: " + matchID.ToString() + "\nWinner: " + winner.ToString() + "\nP1 moves: " + movesP1.ToString() + "\nP2 moves: " + movesP2.ToString() + 
+                                    "\nTime of game: " + totalTimeOfGame.ToString();
+
+                FirebaseStorage storage = FirebaseStorage.DefaultInstance;
+                StorageReference storageRef = storage.RootReference;
+                Debug.Log(DataString);
+                byte[] data = Encoding.ASCII.GetBytes(DataString);
+                StartCoroutine(UploadTextFile(data, storageRef));
+
+            }
+        });
+    }
+
+    private IEnumerator UploadTextFile(byte[] data, StorageReference reference)
+    {
+
+        StorageReference textFileRef = reference.Child("Text files").Child("test.txt");
+
+
+        yield return textFileRef.PutBytesAsync(data)
+    .ContinueWithOnMainThread((task) => {
+        if (task.IsFaulted || task.IsCanceled)
+        {
+            Debug.Log(task.Exception.ToString());
+
+        }
+        else
+        {
+            StorageMetadata metadata = task.Result;
+            string md5Hash = metadata.Md5Hash;
+            Debug.Log("Finished uploading...");
+            //Debug.Log("md5 hash = " + md5Hash);
+        }
+    });
+    }
+
 }
