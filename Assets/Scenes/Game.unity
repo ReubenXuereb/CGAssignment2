@@ -1486,9 +1486,6 @@ MonoBehaviour:
   roomeCodeText: {fileID: 0}
   startGameBtn: {fileID: 0}
   player2text: {fileID: 0}
-  scoreP1: {fileID: 1623172907}
-  scoreP2: {fileID: 579489962}
-  winner: {fileID: 0}
   showSpriteP1:
   - {fileID: 4293218851051034859, guid: ae6e94517ae634248990f547328cc44a, type: 3}
   - {fileID: 1202690697063130827, guid: ae6e94517ae634248990f547328cc44a, type: 3}

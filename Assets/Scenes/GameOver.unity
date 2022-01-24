@@ -493,6 +493,49 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &354197640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 354197642}
+  - component: {fileID: 354197641}
+  m_Layer: 0
+  m_Name: Textfile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &354197641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354197640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6fefa477155eb4fb2aee334dc25cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &354197642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354197640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390857031
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 520585808}
   - component: {fileID: 520585807}
+  - component: {fileID: 520585809}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -591,9 +635,6 @@ MonoBehaviour:
   roomeCodeText: {fileID: 0}
   startGameBtn: {fileID: 0}
   player2text: {fileID: 0}
-  scoreP1: {fileID: 0}
-  scoreP2: {fileID: 0}
-  winner: {fileID: 0}
   showSpriteP1: []
   showSpriteP2: []
   rockButton: {fileID: 0}
@@ -606,6 +647,7 @@ MonoBehaviour:
   switchButtonsOnOff: 0
   playerWinner: 0
   rounds: 5
+  timer: 0
 --- !u!4 &520585808
 Transform:
   m_ObjectHideFlags: 0
@@ -620,6 +662,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &520585809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520585806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e1048c4d67bb847bc33c2d37c43d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joinRoomCode: {fileID: 0}
+  player1:
+    playerName: 
+    rps: 
+    uniqueID: 
+    score: 0
+    moves: 0
+  player2:
+    playerName: 
+    rps: 
+    uniqueID: 
+    score: 0
+    moves: 0
+  currentRound: 0
+  doneOnce: 0
+  playerData:
+    _player1:
+      playerName: 
+      rps: 
+      uniqueID: 
+      score: 0
+      moves: 0
+    _player2:
+      playerName: 
+      rps: 
+      uniqueID: 
+      score: 0
+      moves: 0
 --- !u!1 &758226866
 GameObject:
   m_ObjectHideFlags: 0

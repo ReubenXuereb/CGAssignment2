@@ -16,13 +16,15 @@ public class Player
     public string rps;
     public string uniqueID;
     public float score;
+    public int moves;
 
-    public Player(string playerName, string rps, string uniqueID, float score)
+    public Player(string playerName, string rps, string uniqueID, float score, int moves)
     {
         this.playerName = playerName;
         this.rps = rps;
         this.uniqueID = uniqueID;
         this.score = 0;
+        this.moves = 0;
     }
 }
 
@@ -80,6 +82,8 @@ public class FirebaseConfig : MonoBehaviour
     public static string winner;
     public bool doneOnce;
     public Objects playerData;
+    public static int p1Moves;
+    public static int p2Moves;
 
     public static DatabaseReference myDB;
     // Start is called before the first frame update
@@ -108,7 +112,7 @@ public class FirebaseConfig : MonoBehaviour
     public IEnumerator CreateRoom() 
     {
         string key = myDB.Child("Rooms").Child("Objects").Push().Key;
-        player1 = new Player("Player1", "", key, 0);
+        player1 = new Player("Player1", "", key, 0, 0);
         Objects objects = new Objects(player1, null);
 
         GameRoom room = new GameRoom(objects, false, false, "", 0, false);
@@ -124,7 +128,7 @@ public class FirebaseConfig : MonoBehaviour
     public IEnumerator JoinRoom(string roomCode) 
     {
         string key = myDB.Child("Rooms").Child("Objects").Push().Key;
-        player2 = new Player("Player2", "", key, 0);
+        player2 = new Player("Player2", "", key, 0, 0);
         string json = JsonUtility.ToJson(player2);
         yield return myDB.Child("Rooms").Child(roomCode).Child("objects").Child("_player2").SetRawJsonValueAsync(json);
         roomKey = roomCode;
@@ -186,6 +190,10 @@ public class FirebaseConfig : MonoBehaviour
         if (mainPlayer)
         {
             myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player1").Child("rps").SetValueAsync(choice);
+            player1.moves++;
+            myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player1").Child("moves").SetValueAsync(player1.moves);
+            p1Moves = player1.moves;
+            //print("p1" + moves);
             //if (choice == "Rock")
             //{
             //    GameObject.Find("Player1").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP1[0];
@@ -203,6 +211,10 @@ public class FirebaseConfig : MonoBehaviour
         else
         {
             myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player2").Child("rps").SetValueAsync(choice);
+            player2.moves++;
+            myDB.Child("Rooms").Child(roomKey).Child("objects").Child("_player2").Child("moves").SetValueAsync(player2.moves);
+            p2Moves = player2.moves;
+            print("p2 " + p2Moves);
             //if (choice == "Rock")
             //{
             //    GameObject.Find("Player2").GetComponent<SpriteRenderer>().sprite = GameObject.Find("GameManager").GetComponent<GameManager>().showSpriteP2[0];
@@ -240,6 +252,7 @@ public class FirebaseConfig : MonoBehaviour
             Debug.LogError(args.DatabaseError.Message);
             return;
         }
+
         
     }
 
@@ -265,30 +278,6 @@ public class FirebaseConfig : MonoBehaviour
 
     }
 
-    public void handleWinnerText(string name)
-    {
-        myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync(name);
-    }
-
-    public Objects getPlayerData()
-    {
-        myDB.Child("Rooms").Child(roomKey).Child("objects").GetValueAsync().ContinueWithOnMainThread(task =>
-        {
-            if (task.IsFaulted)
-            {
-                print("something went wrong");
-            }
-            else if (task.IsCompleted)
-            {
-                DataSnapshot snapshot = task.Result;
-                Player p1 = new Player(snapshot.Child("_player1").Child("playerName").Value.ToString(), "", "", 0);
-                Player p2 = new Player(snapshot.Child("_player2").Child("playerName").Value.ToString(), "", "", 0);
-
-                playerData = new Objects(p1, p2);
-            }
-        });
-        return playerData;
-    }
 
     IEnumerator waitForTransition(float seconds)
     {
@@ -339,29 +328,32 @@ public class FirebaseConfig : MonoBehaviour
         
         if (int.Parse(args.Snapshot.Value.ToString()) > GameObject.Find("GameManager").GetComponent<GameManager>().rounds)
         {
-            //print("X jahbat" + int.Parse(args.Snapshot.Value.ToString()));
-            //print(player1.score);
-            //print(player2.score);
-            //if(player1.score > player2.score)
-            //{
-            //    winner = player1.playerName;
-            //    print(player1.playerName);
-            //    myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync(winner);
-            //}
-            //if (player2.score > player1.score)
-            //{
-            //    winner = player2.playerName;
-            //    print(player2.playerName);
-            //    //myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync(winner);
-            //}
+            print("X jahbat" + int.Parse(args.Snapshot.Value.ToString()));
+            print(player1.score);
+            print(player2.score);
+            if (player1.score > player2.score)
+            {
+                winner = player1.playerName;
+                //print(player1.playerName);
+                myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync(winner);
+                GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Player 1 won !!";
+
+            }
+            if (player2.score > player1.score)
+            {
+               //winner = player2.playerName;
+               //print(player2.playerName);
+                myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync("Player 2");
+                winner = "Player 2";
+                GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Player 2 won !!";
+
+            }
             //if (player1.score == player2.score)
             //{
             //    winner = "Draw";
             //    myDB.Child("Rooms").Child(roomKey).Child("winner").SetValueAsync("Draw");
             //}
-            getPlayerData();
             StartCoroutine(waitForTransition(2f));
-            SceneManager.LoadScene("GameOver");
         }
     }
 
@@ -389,8 +381,10 @@ public class FirebaseConfig : MonoBehaviour
             return;
         }
         string p1Choice = args.Snapshot.Child("_player1").Child("rps").Value.ToString();
+        //string p1Choce = args.Snapshot.Child("_player1").Child("moves").Value.ToString();
+        //print(p1Choce);
         string p2Choice = args.Snapshot.Child("_player2").Child("rps").Value.ToString();
-        GameObject whoWonText = GameObject.Find("WhoWonRoundText");
+        //GameObject whoWonText = GameObject.Find("WhoWonRoundText");
         //whoWonText.SetActive(false);
         if(p1Choice != "" && p2Choice != "")
         {
@@ -409,7 +403,6 @@ public class FirebaseConfig : MonoBehaviour
             }
             if (winner == 1)
             {
-           
                // whoWonText.SetActive(true);
                 GameObject.Find("WhoWonRoundText").GetComponent<Text>().text = "Player 1 won this round";
                 
